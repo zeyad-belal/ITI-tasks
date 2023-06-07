@@ -1,0 +1,9 @@
+<div>
+
+  <input [ngClass]="{'valid':nameIsValid == true ,'notValid': nameIsValid== false}" type="text" placeholder="name" [(ngModel)]="name">
+  <span *ngIf="nameIsValid== false">name must be 3 or more chars</span>
+
+  <input [ngClass]="{'valid':ageIsValid == true  ,'notValid': ageIsValid== false}" type="number" placeholder="age" [(ngModel)]="age">
+  <span *ngIf="ageIsValid== false">age must be between 20 and 40</span>
+  <input type="button" value="add" (click)="sendData()">
+</div>

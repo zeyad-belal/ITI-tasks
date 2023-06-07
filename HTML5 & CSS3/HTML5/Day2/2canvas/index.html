@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+    }
+    canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			background-color: transparent;
+		}
+  </style>
+</head>
+<body>
+  <input type="color" >
+  <button  onclick="generateCircules()">click me</button>
+  <canvas width="100%" height="100%" ></canvas>
+
+  <script>  
+    var canvas = document.getElementsByTagName("canvas")[0];
+    var ctx = canvas.getContext("2d");
+    var myColor = document.getElementsByTagName("input")[0];
+    
+    function generateRandom(x){
+      return(Math.floor(Math.random()*x))
+    }
+
+    function generateCircules(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.strokeStyle = myColor.value;
+      for(var i=0; i< 100 ; i++){
+        ctx.beginPath();
+        ctx.arc(generateRandom(canvas.width),generateRandom(canvas.height),50,100,Math.PI*2,true)
+        ctx.stroke();
+      }
+    }
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+  </script>
+</body>
+</html>

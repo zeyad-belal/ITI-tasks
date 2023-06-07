@@ -1,0 +1,518 @@
+body {
+  background-color: red;
+}
+
+/* comment will appear in css*/
+/*! comment will appear in css and min css*/
+.container {
+  background-color: yellow;
+}
+
+.container .parent {
+  font-size: 30px;
+}
+
+.container .parent .child {
+  color: pink;
+}
+
+.container .parent .child::after {
+  content: "hhhhh";
+}
+
+.container .parent:hover {
+  background-color: green;
+}
+
+.container:hover {
+  background-color: blue;
+}
+
+.container-fluid {
+  font-size: 50px;
+}
+
+.child {
+  color: red;
+}
+
+body {
+  color: rgb(111, 212, 23);
+  background-color: gray;
+}
+
+.elem1 {
+  font-size: 30px;
+}
+
+.elem2 {
+  font-size: 100px;
+}
+
+.elem3 {
+  font-size: 200px;
+}
+
+.box1, .box2 {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+
+.box2 {
+  color: white;
+  background-color: yellow;
+}
+
+.elem4 {
+  color: red;
+}
+
+.elem4 {
+  color: green !important;
+  width: 200px;
+  font-size: 100px;
+}
+
+.elem-for-1 {
+  font-size: 10px;
+}
+
+.elem-for-2 {
+  font-size: 20px;
+}
+
+.elem-for-3 {
+  font-size: 30px;
+}
+
+.elem-for-4 {
+  font-size: 40px;
+}
+
+.elem-for-5 {
+  font-size: 50px;
+}
+
+.elem-for-6 {
+  font-size: 60px;
+}
+
+.elem-for-7 {
+  font-size: 70px;
+}
+
+.elem-for-8 {
+  font-size: 80px;
+}
+
+.elem-for-9 {
+  font-size: 90px;
+}
+
+.elem-for-10 {
+  font-size: 100px;
+}
+
+.while-elem-1 {
+  font-size: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+.while-elem-2 {
+  font-size: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+.while-elem-3 {
+  font-size: 30px;
+  width: 300px;
+  height: 150px;
+}
+
+.while-elem-4 {
+  font-size: 40px;
+  width: 400px;
+  height: 200px;
+}
+
+.while-elem-5 {
+  font-size: 50px;
+  width: 500px;
+  height: 250px;
+}
+
+.while-elem-6 {
+  font-size: 60px;
+  width: 600px;
+  height: 300px;
+}
+
+.while-elem-7 {
+  font-size: 70px;
+  width: 700px;
+  height: 350px;
+}
+
+.while-elem-8 {
+  font-size: 80px;
+  width: 800px;
+  height: 400px;
+}
+
+.while-elem-9 {
+  font-size: 90px;
+  width: 900px;
+  height: 450px;
+}
+
+.while-elem-10 {
+  font-size: 100px;
+  width: 1000px;
+  height: 500px;
+}
+
+.each-elem-red {
+  background-color: red;
+}
+
+.each-elem-green {
+  background-color: green;
+}
+
+.each-elem-blue {
+  background-color: blue;
+}
+
+.each-elem-white {
+  background-color: white;
+}
+
+.each-elem-black {
+  background-color: black;
+}
+
+.facebook-website {
+  background-color: blue;
+}
+
+.youtube-website {
+  background-color: red;
+}
+
+.github-website {
+  background-color: black;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: red;
+  }
+}
+.elem5, .elem6 {
+  width: 100px;
+}
+
+@media (max-width: 500px) {
+  .elem5, .elem6 {
+    width: 200px;
+  }
+}
+@media (min-width: 501px) and (max-width: 700px) {
+  .elem5, .elem6 {
+    width: 500px;
+  }
+}
+.elem6 {
+  width: 500px;
+}
+
+.rect {
+  width: 200px;
+  height: 100px;
+}
+
+.block-elem {
+  font-style: italic;
+  font-size: 30px;
+  color: red;
+  background-color: blue;
+}
+
+.square1 {
+  background-color: blue;
+  background-color: red;
+  font-size: 30px;
+  width: 200px;
+  height: 200px;
+  font-style: italic;
+}
+
+.square2 {
+  background-color: blue;
+  font-size: 50px;
+  width: 500px;
+  height: 500px;
+}
+
+.square3 {
+  background-color: red;
+  font-size: 10px;
+  width: 700px;
+  height: 700px;
+}
+
+.theme-elem-light {
+  background-color: white;
+}
+
+.theme-elem-dark {
+  background-color: black;
+  font-size: 50px;
+  color: red;
+}
+
+@media all and (min-width: 0px) {
+  .col-1 {
+    width: 8.3333333333%;
+  }
+  .col-2 {
+    width: 16.6666666667%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.3333333333%;
+  }
+  .col-5 {
+    width: 41.6666666667%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.3333333333%;
+  }
+  .col-8 {
+    width: 66.6666666667%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.3333333333%;
+  }
+  .col-11 {
+    width: 91.6666666667%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 576px) {
+  .col-sm-1 {
+    width: 8.3333333333%;
+  }
+  .col-sm-2 {
+    width: 16.6666666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.3333333333%;
+  }
+  .col-sm-5 {
+    width: 41.6666666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.3333333333%;
+  }
+  .col-sm-8 {
+    width: 66.6666666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.3333333333%;
+  }
+  .col-sm-11 {
+    width: 91.6666666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 768px) {
+  .col-md-1 {
+    width: 8.3333333333%;
+  }
+  .col-md-2 {
+    width: 16.6666666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333333333%;
+  }
+  .col-md-5 {
+    width: 41.6666666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.3333333333%;
+  }
+  .col-md-8 {
+    width: 66.6666666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.3333333333%;
+  }
+  .col-md-11 {
+    width: 91.6666666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.3333333333%;
+  }
+  .col-lg-2 {
+    width: 16.6666666667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.3333333333%;
+  }
+  .col-lg-5 {
+    width: 41.6666666667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.3333333333%;
+  }
+  .col-lg-8 {
+    width: 66.6666666667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.3333333333%;
+  }
+  .col-lg-11 {
+    width: 91.6666666667%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 1900px) {
+  .col-xxl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xxl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xxl-3 {
+    width: 25%;
+  }
+  .col-xxl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xxl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xxl-6 {
+    width: 50%;
+  }
+  .col-xxl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xxl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xxl-9 {
+    width: 75%;
+  }
+  .col-xxl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xxl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xxl-12 {
+    width: 100%;
+  }
+}
+.row {
+  display: flex;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container--child__red {
+  background-color: red;
+} /*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */

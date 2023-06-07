@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./master.css">
+</head>
+<body>
+  <!-- num of books  -->
+  <form class="numofbForm">
+    <label for="">
+      how many books?
+      <input type="number" class="numofBooks" placeholder="Enter Book No."> 
+    </label> 
+    <button class="confirmBooks">ok</button>
+  </form>
+
+  <!-- book info -->
+  <form class="bookInfoForm">
+    <label for="">book name    <input required id="bookName" type="text" placeholder="Enter Book Name."> <span id="BnameError"></span></label>
+    <label for="">book price   <input required id="bookPrice" type="text" placeholder="Enter Book price"> <span id="priceError"></span></label>
+    <label for="">author name  <input required id="authorName" type="text" placeholder="Enter author name."> <span id="AnameError"></span></label>
+    <label for="">author email <input required id="authorEmail" pattern="a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" placeholder="Enter author email."> <span id="emailError"></span></label>
+  <button id="addBook">add</button>
+  </form>
+
+  <!-- table info -->
+  <table id="booksTable">
+    <thead>
+      <tr>
+        <th>book name</th>
+        <th>price</th>
+        <th>author name</th>
+        <th>author email</th>
+        <th>edit</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="./main.js"></script>
+</body>
+</html> 

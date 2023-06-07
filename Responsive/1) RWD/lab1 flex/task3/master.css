@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  text-align: center;
+}
+
+.layout{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.middle{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 3px;
+}
+
+header,footer{
+  background-color: blue;
+  flex-basis: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside{
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+main{
+  background-color: green;
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

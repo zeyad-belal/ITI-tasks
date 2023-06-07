@@ -1,0 +1,9 @@
+img,div{
+  width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+div{
+  display: flex;
+  gap: 15px;
+}

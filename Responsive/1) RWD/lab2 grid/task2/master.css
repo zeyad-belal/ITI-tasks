@@ -1,0 +1,61 @@
+body{
+  margin: 0;
+  text-align: center;
+}
+
+.layout{
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "head head head head head"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "sidenav main main main sidebar"
+  "foot foot foot foot foot";
+}
+
+
+header,footer{
+  background-color: blue;
+}
+
+header{
+  grid-area: head;
+}
+
+footer{
+  grid-area: foot;
+}
+
+.SIDENAV{
+  background-color: orangered;
+  grid-area: sidenav;
+}
+
+.SIDEBAR{
+  background-color: orangered;
+  grid-area: sidebar;
+}
+main{
+  background-color: green;
+  grid-area: main;
+}
+
+@media (max-width:600px) {
+  .layout{
+    grid-template-areas: "head head head head head"
+    "sidenav sidenav sidenav sidenav sidenav"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "sidebar sidebar sidebar sidebar sidebar"
+    "foot foot foot foot foot";
+  }
+}

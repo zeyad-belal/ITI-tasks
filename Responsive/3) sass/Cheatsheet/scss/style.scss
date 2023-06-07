@@ -1,0 +1,262 @@
+//^ koala , prepros , compass --> advanced
+//? installation
+//* 1- live sass compiler --> styles.scss --> watch sass
+//* 2- node --> npm i sass -g --> create two css , scss
+//* sass --watch scss:css -->scss "styles.scss"
+//& css preprocessor --> script file compilation to css
+//! sass  --> old syntax "python indentation"
+// body
+//    background:red
+//! partial file _filename.scss
+@import "./colors";
+//! scss
+body {
+  background-color: red;
+}
+//~ any css syntax valid here
+//? comments
+// comment not appear in css
+/* comment will appear in css*/
+/*! comment will appear in css and min css*/
+
+//^ nesting
+.container {
+  background-color: yellow;
+  .parent {
+    font-size: 30px;
+    .child {
+      color: pink;
+      &::after {
+        content: "hhhhh";
+      }
+    }
+    &:hover {
+      background-color: green;
+    }
+  }
+  //~ ampersand
+  &:hover {
+    background-color: blue;
+  }
+  &-fluid {
+    font-size: 50px;
+  }
+}
+.child {
+  color: red;
+}
+
+//? scss variables
+
+body {
+  color: $primary;
+  background-color: $secondary;
+}
+//? global
+$font: 30px;
+.elem1 {
+  font-size: $font;
+}
+.elem2 {
+  //? local
+  $font: 100px;
+  font-size: $font;
+}
+
+$font: 200px; //? rewrite
+.elem3 {
+  font-size: $font;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+.box2 {
+  color: white;
+  @extend .box1;
+  background-color: yellow;
+}
+
+//? placeholder  --> template
+.elem4 {
+  color: red;
+  @extend %square;
+}
+%square {
+  color: green !important;
+  width: 200px;
+  font-size: 100px;
+}
+
+//& Directives
+//? interpolation ---> #{$varname}
+//^ @for
+
+@for $i from 1 through 10 {
+  .elem-for-#{$i} {
+    font-size: $i * 10px;
+  }
+}
+
+//^ @while
+$i: 1;
+@while $i <= 10 {
+  .while-elem-#{$i} {
+    font-size: $i * 10px;
+    width: $i * 100px;
+    height: $i * 50px;
+  }
+  $i: $i + 1;
+}
+
+//^ @each
+
+$colors: red, green, blue, white, black; //~array
+@each $col in $colors {
+  .each-elem-#{$col} {
+    background-color: $col;
+  }
+}
+
+$websites: (
+  //~object
+  "facebook": blue,
+  "youtube": red,
+  "github": black
+);
+
+@each $web, $color in $websites {
+  .#{$web}-website {
+    background-color: $color;
+  }
+}
+
+//^ media query
+@media (max-width: 500px) {
+  //? css file
+  body {
+    background-color: red;
+  }
+}
+
+.elem5 {
+  width: 100px;
+  @media (max-width: 500px) {
+    width: 200px;
+  }
+  @media (min-width: 501px) and (max-width: 700px) {
+    width: 500px;
+  }
+}
+.elem6 {
+  @extend .elem5;
+  width: 500px;
+}
+//^ @function --> return sth
+@function half($num) {
+  @return $num/2;
+}
+
+$size: 200px;
+.rect {
+  width: $size;
+  height: half($size);
+}
+
+//^ mixin --> return block od sass code look like placeholder
+@mixin block {
+  font-style: italic;
+  font-size: 30px;
+  color: red;
+  background-color: blue;
+}
+
+.block-elem {
+  @include block();
+}
+
+@mixin square($color: orange, $font: 20px, $size: 700px) {
+  background-color: $color;
+  font-size: $font;
+  width: $size;
+  height: $size;
+}
+
+.square1 {
+  background-color: blue;
+  @include square(red, 30px, 200px);
+  font-style: italic;
+}
+.square2 {
+  @include square(blue, 50px, 500px);
+}
+.square3 {
+  @include square(red, 10px);
+}
+
+//^ @if @else-if @else
+@mixin theme($is-dark: true) {
+  @if $is-dark {
+    background-color: black;
+    font-size: 50px;
+    color: red;
+  } @else {
+    background-color: white;
+  }
+}
+.theme-elem-light {
+  @include theme(false);
+}
+
+.theme-elem-dark{
+    @include theme();
+}
+
+
+@mixin bootstrapCol($numofcols:12,$screenname:'',$breakpoint:0px){
+    @if($screenname == ''){
+        @media all and (min-width:$breakpoint){
+            @for $i from 1 through $numofcols{
+                .col-#{$i}{
+                    width:($i/$numofcols) *100%;
+                }
+            }
+        }
+    }@else{
+        @media all and (min-width:$breakpoint){
+            @for $i from 1 through $numofcols{
+                .col-#{$screenname}-#{$i}{
+                    width:($i/$numofcols) *100%;
+                }
+            }
+        }
+    }
+}
+
+@include bootstrapCol();
+@include bootstrapCol(12,'sm',576px);
+@include bootstrapCol(12,'md',768px);
+@include bootstrapCol(12,'lg',992px);
+@include bootstrapCol(12,'xl',1200px);
+@include bootstrapCol(12,'xxl',1900px);
+
+.row{
+    display: flex;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+//? BEM "Block Element Modifier" ==> parent , what i do
+.container--child__red{
+  background-color: red;
+}
+
+//? hyphen delimited string
+// .container-fluid{
+
+// }
+

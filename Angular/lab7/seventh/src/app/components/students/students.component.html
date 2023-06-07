@@ -1,0 +1,28 @@
+<main *ngIf="students">
+  <table>
+    <thead>
+      <th>id</th>
+      <th>name</th>
+      <th>email</th>
+      <th>username</th>
+      <th>city</th>
+      <th>details</th>
+      <th>update</th>
+      <th>delete</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of students">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.city}}</td>
+        <td><button routerLink="users/{{u.id}}">Details</button></td>
+        <td><button routerLink="users/update/{{u.id}}">update</button></td>
+        <td><button (click)="deleteUser(u.id)" >delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+

@@ -1,0 +1,14 @@
+div{
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  align-items: center;
+}
+.valid{
+  border: 1px solid green;
+}
+
+.notValid{
+  border: 1px solid red;
+}

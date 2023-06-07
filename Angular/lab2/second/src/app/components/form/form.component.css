@@ -1,0 +1,12 @@
+input[type="button"]
+{
+  margin-bottom: 200px;
+  display: block;
+}
+main{
+  margin: auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

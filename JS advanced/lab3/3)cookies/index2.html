@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document2</title>
+</head>
+<body>
+  <div id="welcome" style="margin: 50px auto;font-size: 20px;text-align: center;"></div>
+
+  <script >
+    function setCookie(cookieName,cookieValue,expireDate){
+      if(typeof cookieName != "string" ||typeof cookieValue != "string" ||typeof expireDate != "string"){
+        throw("string values only")
+      }
+    document.cookie = cookieName + "=" + cookieValue +";" + "expires="+ new Date(expireDate) +";"
+    }
+    function getCookie(k){
+    var res = "not found"
+    var arr = document.cookie.split(";");
+    for(var i=0 ; i < arr.length ; i++){
+      var key = arr[i].split('=')[0]
+      if(key.trim() === k){
+        res = arr[i].split('=')[1]
+      }    
+    }
+    return res
+    }
+//     window.addEventListener('popstate', function (event) {
+//   history.pushState(null, null, document.URL);
+// });
+    welomeDiv = document.getElementById("welcome")
+
+    var Uname = getCookie("name")
+    var Uage = getCookie("age")
+    var Ugender = getCookie("gender")
+    var Ucolor = getCookie("color")
+
+    window.addEventListener("load", (e)=>{
+      var Visits = (Number(getCookie("visitCount")) + 1).toString()
+      setCookie("visitCount", Visits , "1/1/2099")
+
+      welomeDiv.innerHTML =
+        "<img style='max-width: 200px;'src=" + Ugender+".png" + ">" +
+        "welcome <span>" + Uname + "</span>" +
+        " your age is " + Uage + 
+        " you have visited this page <span>"+ getCookie("visitCount") +"</span>times"
+        document.getElementsByTagName("span")[0].style.color= Ucolor 
+        document.getElementsByTagName("span")[1].style.color= Ucolor 
+    })
+
+
+
+  </script>
+  <!-- <script src="./main.js"></script> -->
+</body>
+</html>

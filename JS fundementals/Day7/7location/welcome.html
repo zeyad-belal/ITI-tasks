@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="welcome"
+      style="
+        margin: 200px auto;
+        width: 500px;
+        font-size: 20px;
+        border: 1px solid black;
+        text-align: center;
+        padding: 50px 100px;
+        ">
+    </div>
+  <script >
+    welomeDiv = document.getElementById("welcome")
+    var queryParams = new URLSearchParams(window.location.search);
+    var name = queryParams.get("name");
+    var email = queryParams.get("email");
+    var address = queryParams.get("address");
+    var gender = queryParams.get("gender");
+    var mobile = queryParams.get("mobile");
+    console.log(window.location)
+    welomeDiv.innerHTML =
+      "welcome " + name + "</br>" +
+      "address: " + address + "</br>" +
+      "gender: " + gender + "</br>" +
+      "email: " + email + "</br>" +
+      "mobile : " + mobile + "</br>";
+  </script>
+    <!-- <script src="./main.js"></script> -->
+  </body>
+</html>
